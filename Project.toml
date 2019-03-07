@@ -1,0 +1,4 @@
+name = "GenPrintf"
+uuid = "cfa2446e-407d-11e9-244e-b518dcb6026c"
+authors = ["Fabio Cardeal <ficarde@gmail.com>"]
+version = "0.1.0"
