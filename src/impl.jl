@@ -12,8 +12,14 @@ end
 
 @pure function printf_impl(fmt::Type{PrintValue{V}}, len, i=1) where V
   assert_argument_number(len, 0)
-  quote
-    Base.print($(String(V)))
+  let s = String(V)
+    if s == ""
+      quote end
+    else
+      quote
+        Base.print($s)
+      end
+    end
   end
 end
 
